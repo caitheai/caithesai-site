@@ -1,0 +1,210 @@
+﻿/* 🌌 Cyberpunk Colors */
+:root {
+    --main-color: #00ffff;
+    --main-color-light: #33ffff;
+    --main-color-dark: #009999;
+    --bg-color: #000000;
+    --text-color: #00ffff;
+    --text-light: #33ffff;
+    --accent-color: #ff00ff; /* optional for highlights */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    padding: 20px;
+}
+
+    nav a {
+        color: var(--main-color);
+        font-size: 2rem;
+        position: relative;
+        padding: 5px 10px;
+        transition: 0.3s;
+    }
+
+        nav a::before, nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 100%;
+            top: 0;
+            background: var(--main-color-light);
+            box-shadow: 0 0 20px var(--main-color-light);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a::before {
+            left: 0;
+        }
+
+        nav a::after {
+            right: 0;
+        }
+
+        nav a:hover {
+            color: var(--text-light);
+            text-shadow: 0 0 10px var(--main-color-light), 0 0 20px var(--main-color);
+        }
+
+            nav a:hover::before, nav a:hover::after {
+                width: 5px;
+            }
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* 🌟 Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Homepage */
+.homepage h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.homepage h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--main-color-light);
+}
+
+.homepage p {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Projects */
+.projects-section h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #111;
+    border: 2px solid var(--main-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+    .project-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        margin: 10px 0 5px;
+        color: var(--main-color-light);
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 15px;
+    }
+
+    .project-card .project-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .project-card button {
+        background-color: var(--main-color);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+        .project-card button:hover {
+            box-shadow: 0 0 15px var(--main-color);
+        }
+
+    .project-card .status {
+        color: var(--text-light);
+        font-size: 0.8rem;
+    }
+
+    .project-card:hover {
+        box-shadow: 0 0 20px var(--main-color);
+        transform: translateY(-5px);
+    }
+
+/* About */
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+    .about-page img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 3px solid var(--main-color);
+        margin-bottom: 20px;
+    }
+
+    .about-page h1 {
+        font-size: 3rem;
+        color: var(--main-color);
+        margin-bottom: 20px;
+    }
+
+    .about-page p {
+        max-width: 600px;
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+.contact {
+    color: var(--main-color-light);
+    font-size: 1rem;
+}
