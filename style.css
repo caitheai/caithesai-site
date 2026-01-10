@@ -204,6 +204,15 @@ section {
     color: var(--main-color-light);
 }
 
+.homepage h4 {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.3rem;
+    color: var(--proj-col-sec);
+    animation: fadeInText 2s ease-in-out;
+}
+
 .homepage p {
     text-align: center;
     max-width: 700px;
@@ -469,4 +478,109 @@ section {
     .page-wrapper.page-enter {
         opacity: 1;
         transform: scale(1);
+    }
+
+.project-header-box {
+    max-width: 900px;
+    margin: 20px auto 40px auto; 
+    padding: 30px;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--main-color-light);
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    animation: flickerBox 3s linear infinite;
+}
+
+    .project-header-box h2 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        color: var(--main-color);
+        text-shadow: 0 0 10px var(--main-color-light), 0 0 20px var(--main-color);
+        animation: flickerText 2.5s linear infinite;
+    }
+
+@keyframes flickerText {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px var(--main-color-light), 0 0 20px var(--main-color);
+    }
+
+    20%, 22%, 24%, 55% {
+        opacity: 0.4;
+        text-shadow: 0 0 3px var(--main-color-dark), 0 0 5px var(--main-color-dark);
+    }
+}
+
+@keyframes flickerBox {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow: 0 0 20px var(--main-color-light);
+        border-color: var(--main-color);
+    }
+
+    20%, 22%, 24%, 55% {
+        box-shadow: 0 0 5px var(--main-color-dark);
+        border-color: var(--main-color-dark);
+    }
+}
+
+
+    .project-header-box p {
+        color: var(--text-light);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+.project-status {
+    color: var(--text-light);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+    .project-status span:first-child {
+        color: var(--main-color);
+        margin-right: 10px;
+    }
+
+.project-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.devlog-entry {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 15px 20px;
+    border: 2px solid var(--main-color-dark);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px var(--main-color-light);
+    cursor: pointer;
+}
+
+    .devlog-entry summary {
+        font-size: 1.4rem;
+        color: var(--main-color-light);
+        outline: none;
+        text-shadow: 0 0 5px var(--main-color);
+    }
+
+    .devlog-entry[open] summary {
+        color: var(--main-color);
+        text-shadow: 0 0 15px var(--main-color-light), 0 0 25px var(--main-color);
+    }
+
+    .devlog-entry p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .devlog-entry img {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 10px;
+        border: 2px solid var(--main-color-light);
+        border-radius: 5px;
+        box-shadow: 0 0 20px var(--main-color);
     }

@@ -24,7 +24,7 @@ document.querySelectorAll("a").forEach(link => {
 
             setTimeout(() => {
                 window.location = link.href;
-            }, 550);
+            }, 650);
         });
     }
 });
