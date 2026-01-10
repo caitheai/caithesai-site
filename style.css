@@ -584,3 +584,212 @@ section {
         border-radius: 5px;
         box-shadow: 0 0 20px var(--main-color);
     }
+
+.project-header-section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.project-header-box {
+    margin-top: 0;
+}
+
+.devlog-entry {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 15px 20px;
+  border: 2px solid var(--main-color-dark);
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px var(--main-color-light);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.devlog-entry > *:not(summary) {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.devlog-entry[open] > *:not(summary) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.devlog-entry::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -5%;
+  width: 110%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    rgba(0,255,255,0.05) 0px,
+    rgba(0,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0;
+  animation: glitchOverlay 2s linear infinite;
+}
+
+.devlog-entry[open]::after {
+  opacity: 0.2;
+}
+
+@keyframes glitchOverlay {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  75% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+.devlog-entry summary {
+  font-size: 1.4rem;
+  color: var(--main-color-light);
+  outline: none;
+  text-shadow: 0 0 5px var(--main-color);
+  transition: text-shadow 0.3s ease;
+}
+
+.devlog-entry[open] summary {
+  text-shadow: 0 0 15px var(--main-color-light), 0 0 25px var(--main-color);
+}
+
+.devlog-entry {
+  max-width: 700px;
+  margin: 25px auto;
+  border: 2px solid var(--main-color-dark);
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px var(--main-color-light);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.devlog-entry .devlog-content {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.6s ease;
+}
+
+.devlog-entry[open] .devlog-content {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.devlog-entry::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -5%;
+  width: 110%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    rgba(0,255,255,0.05) 0px,
+    rgba(0,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  animation: glitchOverlay 2s linear infinite;
+}
+
+.devlog-entry[open]::after {
+  opacity: 0.2;
+}
+
+@keyframes glitchOverlay {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(2px); }
+  50% { transform: translateX(-2px); }
+  75% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+.devlog-entry summary {
+  font-size: 1.4rem;
+  color: var(--main-color-light);
+  outline: none;
+  text-shadow: 0 0 5px var(--main-color);
+  transition: text-shadow 0.3s ease;
+}
+
+.devlog-entry[open] summary {
+  text-shadow: 0 0 15px var(--main-color-light), 0 0 25px var(--main-color);
+}
+
+.devlog-entry {
+    max-width: 700px;
+    margin: 25px auto;
+    border: 2px solid var(--main-color-dark);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px var(--main-color-light);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.devlog-content {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+}
+
+.devlog-entry::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient( rgba(0,255,255,0.05) 0px, rgba(0,255,255,0.05) 2px, transparent 2px, transparent 4px );
+    opacity: 0;
+    animation: glitchOverlay 2s linear infinite;
+}
+
+@keyframes glitchOverlay {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(2px);
+    }
+
+    50% {
+        transform: translateX(-2px);
+    }
+
+    75% {
+        transform: translateX(1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.devlog-content video,
+.devlog-content iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 2px solid var(--main-color-light);
+    box-shadow: 0 0 15px var(--main-color-light);
+    border-radius: 5px;
+}
