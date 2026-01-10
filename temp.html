@@ -60,33 +60,36 @@
         document.querySelectorAll('.devlog-entry').forEach(entry => {
             const content = entry.querySelector('.devlog-content');
             const summary = entry.querySelector('summary');
-            const ANIM_DURATION = 600;
-
-            if (!entry.hasAttribute('open')) {
-                content.style.maxHeight = 0;
-                content.style.opacity = 0;
-                content.style.transform = "translateY(-10px)";
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.style.opacity = 1;
-                content.style.transform = "translateY(0)";
-            }
+            const DURATION = 600;
 
             summary.addEventListener('click', e => {
                 e.preventDefault();
 
-                if (!entry.hasAttribute('open')) {
+                const isOpen = entry.hasAttribute('open');
+
+                if (!isOpen) {
                     entry.setAttribute('open', '');
+
                     content.style.maxHeight = content.scrollHeight + "px";
                     content.style.opacity = 1;
                     content.style.transform = "translateY(0)";
+
+                    setTimeout(() => {
+                        content.style.maxHeight = "none";
+                    }, DURATION);
+
                 } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    content.offsetHeight;
+
                     content.style.maxHeight = 0;
                     content.style.opacity = 0;
                     content.style.transform = "translateY(-10px)";
+
                     setTimeout(() => {
                         entry.removeAttribute('open');
-                    }, ANIM_DURATION);
+                    }, DURATION);
                 }
             });
         });
@@ -97,14 +100,18 @@
 <!--
     THING:
 
-    <details class="devlog-entry">
+     <details class="devlog-entry">
     <summary>Update #1 - Jan 1, 2026</summary>
     <div class="devlog-content">
+        <br />
         <p>Description of this update, what changed, new features, or bug fixes.</p>
         <img src="images/devlog1.png" alt="Devlog Image 1">
-        <video width="100%" controls>
-            <source src="videos/demo.mp4" type="video/mp4">
+        <br />
+        <h3>Name of Video:</h3>
+        <video width="65%" controls>
+            <source src="videos/video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    </details>
     -->
