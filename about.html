@@ -50,6 +50,23 @@
 
     </div>
 
+    <audio id="click-sound">
+        <source src="audio/click.mp3" type="audio/mp3">
+    </audio>
     <script src="transition.js"></script>
+    <script>
+        const clickSound = document.getElementById("click-sound");
+
+        clickSound.volume = 0.6; // volume vro
+
+        document.addEventListener("click", (e) => {
+            const target = e.target.closest("button, a");
+
+            if (target) {
+                clickSound.currentTime = 0;
+                clickSound.play().catch(() => { });
+            }
+        });
+    </script>
 </body>
 </html>
