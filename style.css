@@ -823,7 +823,6 @@ section {
     overflow: hidden;
 }
 
-    /* Subtle scanlines */
     .award-panel::after {
         content: '';
         position: absolute;
@@ -833,7 +832,6 @@ section {
         opacity: 0.4;
     }
 
-/* Image */
 .award-image {
     width: 180px;
     height: auto;
@@ -842,7 +840,6 @@ section {
     flex-shrink: 0;
 }
 
-/* Text */
 .award-info h2 {
     font-size: 1.6rem;
     color: var(--main-color);
@@ -867,7 +864,6 @@ section {
     line-height: 1.6;
 }
 
-/* Soft ambient motion */
 .award-panel {
     animation: subtleFloat 8s ease-in-out infinite;
 }
@@ -882,7 +878,6 @@ section {
     }
 }
 
-/* ===== Award hover glow ===== */
 .award-panel {
     transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
 }
@@ -893,7 +888,6 @@ section {
         transform: translateY(-6px);
     }
 
-    /* Gentle animated glow pulse while hovered */
     .award-panel:hover {
         animation: awardGlowPulse 2.5s ease-in-out infinite;
     }
