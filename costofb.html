@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost of Betrayal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="tech-shape small" style="top:10px; left:20px;"></div>
+        <div class="tech-shape medium" style="bottom:30px; right:50px;"></div>
+        <div class="tech-shape large" style="top:200px; right:10px;"></div>
+        <div class="tech-shape small" style="bottom:100px; left:150px;"></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About Me</a>
+        </nav>
+
+        <section class="projects-section">
+            <div class="project-header-box">
+                <h2>Cost of Betrayal</h2>
+                <p>A telltale-inspired story game about making choices that'll effect your character and those around you, play as Carl on his journey on revenge against his former best friend. Be vengeful or merciful, kill or spare, the choice is yours!'</p>
+                <p>Below is my Development Process where I post updates about the game, these will come out much slower than most of my other project but will be extremely long compared to others</p>
+
+                <div class="project-status">
+                    <span>Status:</span>
+                    <span>In Development</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 style="text-align:center;">Development Updates & Devlog</h2>
+
+            <!-- Put the Dropdown Logs here lol-->
+
+            </details>
+
+        </section>
+
+    </div>
+
+    <script src="transition.js"></script>
+    <script>
+        document.querySelectorAll('.devlog-entry').forEach(entry => {
+            const content = entry.querySelector('.devlog-content');
+            const summary = entry.querySelector('summary');
+            const DURATION = 600;
+
+            summary.addEventListener('click', e => {
+                e.preventDefault();
+
+                const isOpen = entry.hasAttribute('open');
+
+                if (!isOpen) {
+                    entry.setAttribute('open', '');
+
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.opacity = 1;
+                    content.style.transform = "translateY(0)";
+
+                    setTimeout(() => {
+                        content.style.maxHeight = "none";
+                    }, DURATION);
+
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    content.offsetHeight;
+
+                    content.style.maxHeight = 0;
+                    content.style.opacity = 0;
+                    content.style.transform = "translateY(-10px)";
+
+                    setTimeout(() => {
+                        entry.removeAttribute('open');
+                    }, DURATION);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+    THING:
+
+     <details class="devlog-entry">
+    <summary>Update #1 - Jan 1, 2026</summary>
+    <div class="devlog-content">
+        <br />
+        <p>Description of this update, what changed, new features, or bug fixes.</p>
+        <img src="images/devlog1.png" alt="Devlog Image">
+        <br />
+        <h3>Name of Video:</h3>
+        <video width="65%" controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </details>
+    -->
