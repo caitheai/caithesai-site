@@ -35,7 +35,21 @@
         </section>
 
     </div>
+    <audio id="click-sound">
+        <source src="audio/clickeffectlmfao.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        const clickSound = document.getElementById("click-sound");
 
+        clickSound.volume = 0.15; // volume here, DO NOT FORGET THIS!!
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                clickSound.currentTime = 0;
+                clickSound.play().catch(() => { });
+            });
+        });
+    </script>
     <script src="transition.js"></script>
 </body>
 </html>
