@@ -968,3 +968,16 @@ section {
         box-shadow: 0 0 30px rgba(0,255,255,0.5);
     }
 }
+
+.dropdown-date {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--accent-dark);
+    text-transform: uppercase;
+    opacity: 0.85;
+    text-shadow: 0 0 6px rgba(0,255,255,0.25);
+    animation: flicker 6s infinite; 
+}
