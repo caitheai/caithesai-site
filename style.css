@@ -981,3 +981,39 @@ section {
     text-shadow: 0 0 6px rgba(0,255,255,0.25);
     animation: flicker 6s infinite; 
 }
+
+
+/* ok don't forget this
+    this is the "new" tag lol
+*/
+.project-card {
+    position: relative;
+}
+
+.new-tag {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff4d4d;
+    background: linear-gradient( 180deg, #1a0000, #000000 );
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), inset 0 0 6px rgba(255, 0, 0, 0.4);
+    z-index: 2;
+    pointer-events: none;
+    animation: tagPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes tagPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4), inset 0 0 6px rgba(255, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 18px rgba(255, 0, 0, 0.8), inset 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+}
