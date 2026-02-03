@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape From Chicago</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="tech-shape small" style="top:10px; left:20px;"></div>
+        <div class="tech-shape medium" style="bottom:30px; right:50px;"></div>
+        <div class="tech-shape large" style="top:200px; right:10px;"></div>
+        <div class="tech-shape small" style="bottom:100px; left:150px;"></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About Me</a>
+        </nav>
+
+        <section class="projects-section">
+            <div class="project-header-box">
+                <h2>Escape From Chicago</h2>
+                <p>Escaped from Chicago is my submission for the 2026 Global Game Jam, in which we were only given a total of 48 hours to get a working game out. I was the PROGRAMMER working in a team of 5 people.</p>
+                <p>Below is my Development Process where I post updates about the game, where I go over my experience with the game jam and how I tackled the many problems and challenges that came with it.</p>
+
+                <div class="project-status">
+                    <span>Status:</span>
+                    <span>Finished</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://globalgamejam.org/games/2026/escape-chicago-6" class="visit-btn" target="_blank">GGJ Website Post</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 style="text-align:center;">Development Updates & Devlog</h2>
+
+            <details class="devlog-entry">
+                <summary>The 48 Hours</summary>
+                <div class="devlog-content">
+                    <br />
+                    <span class="dropdown-date">Jan 30th - Feb 1st 2026</span>
+                    <p>This was my first Game Jam, and overall, I'd say it was a success! I would've loved to get more done, we had our ups and downs, and some of of our team members said they'd like to keep working on this to turn it into a full game, which I'd love to work on them with.</p>
+
+                    <p>We didn't have the biggest advantage when working on this game, one of my teammates did almost nothing, and only showed up on the first day, while another left and sat on his phone a lot, leaving us with really only 3 Full-Time team members, which compared to most other teams, that had 6+, had us fighting against the clock to get a good final product out!</p>
+
+                    <p>Because of the above mentioned group members, we had problems reaching our intended scope, since when we made our scope we assumed we'd have 5 people. After that, the only really big problem I had was with some of the timeline animations in Unreal. During the work on the project, I ran into a issue with what I leanred is called 'Gimbal Lock', this made rotating an object on the Y axis really difficult for a reason I still don't really understand, I eventually managed to get around this by using an Ease node off of the timeline as supposed to running the animation directly off of the timeline'</p>
+                    <br />
+                    <h3>Finished Animations:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/gamejam1/Animations.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Other than out time issues, the rest of the project let us make some really cool stuff, I made a combat system using freeze frames that allow players to really feel the hit when hitting an NPC, combined with a highlight on the enemies and a screen shake, it really makes every hit feel powerful and I'm really pretty proud of it</p>
+                    <br />
+                    <h3>Combat Hit:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/gamejam1/Combat.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Our main mechanic, what related to the Game Jam theme of Masks, was that the player was wearing a gas mask, and instead of keeping gas out, it kept gas in, with the player being able to inject different vials of gas into their mask to get different abilities to use in combat, such as poisoned attack, increased damage, freezing hits, etc. This ability has a physical aspect of of rotating vials on the wrists, and would also has a UI element if I had more time. Another effect I'm pretty proud of is that the player gets a screen tint when using the vial, and their model glows with a colored highlight.</p>
+                    <br />
+                    <h3>Vial Usage Mechanic:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/gamejam1/Vials.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Overall, I think this Jam was a great learning experience, I learned how to do a few new things, I had to work around problems I hadn't even encountered before, both inside of the Game Engine and it terms of group management, but I also learned new things and experimented more with Animation Graphs, Blueprints, and Physical Materials, so overall, despite the lack of sleep I got during it, I am happy I joined this jam and with how things turned out!</p>
+                    <br />
+                    <h3>Images:</h3>
+                    <img src="images/jam1/1.png" alt="Devlog Image">
+                    <img src="images/jam1/2.png" alt="Devlog Image">
+                    <img src="images/jam1/3.png" alt="Devlog Image">
+                    <img src="images/jam1/4.png" alt="Devlog Image">
+                    <img src="images/jam1/CoverFULL.png" alt="Devlog Image">
+                </div>
+
+            </details>
+
+        </section>
+
+    </div>
+
+    <script src="transition.js"></script>
+    <script>
+        document.querySelectorAll('.devlog-entry').forEach(entry => {
+            const content = entry.querySelector('.devlog-content');
+            const summary = entry.querySelector('summary');
+            const DURATION = 600;
+
+            summary.addEventListener('click', e => {
+                e.preventDefault();
+
+                const isOpen = entry.hasAttribute('open');
+
+                if (!isOpen) {
+                    entry.setAttribute('open', '');
+
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.opacity = 1;
+                    content.style.transform = "translateY(0)";
+
+                    setTimeout(() => {
+                        content.style.maxHeight = "none";
+                    }, DURATION);
+
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    content.offsetHeight;
+
+                    content.style.maxHeight = 0;
+                    content.style.opacity = 0;
+                    content.style.transform = "translateY(-10px)";
+
+                    setTimeout(() => {
+                        entry.removeAttribute('open');
+                    }, DURATION);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+    THING:
+
+     <details class="devlog-entry">
+    <summary>Update #1 - Jan 1, 2026</summary>
+    <div class="devlog-content">
+        <br />
+        <p>Description of this update, what changed, new features, or bug fixes.</p>
+        <img src="images/devlog1.png" alt="Devlog Image">
+        <br />
+        <h3>Name of Video:</h3>
+        <video width="65%" controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </details>
+    -->
