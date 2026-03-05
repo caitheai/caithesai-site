@@ -188,7 +188,16 @@
             </details>
 
         </section>
-
+        <div class="project-team">
+            <button class="team-toggle">Team Info →</button>
+            <div class="team-dropdown">
+                <ul>
+                    <li>Cai Mcdonnell - Programming & Audio</li>
+                    <li>Sophia Villeneuve - UI, Level Design, Modeling</li>
+                    <li>Armaan Gil - Producer</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="transition.js"></script>
@@ -226,6 +235,19 @@
                     setTimeout(() => {
                         entry.removeAttribute('open');
                     }, DURATION);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.team-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('open');
+                const clickSound = document.getElementById("click-sound");
+                if (clickSound) {
+                    clickSound.currentTime = 0;
+                    clickSound.play().catch(() => { });
                 }
             });
         });

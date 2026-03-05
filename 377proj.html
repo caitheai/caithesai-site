@@ -112,7 +112,17 @@
             </details>
 
         </section>
-
+        <div class="project-team">
+            <button class="team-toggle">Team Info →</button>
+            <div class="team-dropdown">
+                <ul>
+                    <li>Cai Mcdonnell - Programming, Team Lead, Build Engineer</li>
+                    <li>Andrew Balaris - Producer & Modeler</li>
+                    <li>Rayen Yousif - Rigger, Animator, Modeler</li>
+                    <li>Vincent Huang - Modeler & Texturer</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="transition.js"></script>
@@ -150,6 +160,19 @@
                     setTimeout(() => {
                         entry.removeAttribute('open');
                     }, DURATION);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.team-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('open');
+                const clickSound = document.getElementById("click-sound");
+                if (clickSound) {
+                    clickSound.currentTime = 0;
+                    clickSound.play().catch(() => { });
                 }
             });
         });
