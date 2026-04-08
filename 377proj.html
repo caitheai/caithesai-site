@@ -43,6 +43,34 @@
         <section class="projects-section">
             <h2 style="text-align:center;">Development Updates & Devlog</h2>
             <details class="devlog-entry">
+                <summary>Sprint #5</summary>
+                <div class="devlog-content">
+                    <br />
+                    <p>Unfortunately, I didn’t get as many points done this sprint as I did many of the previous sprints, I’m a little disappointed in myself for not doing over 20, but I was mostly focused on polished and bug squashing this sprint, which is responsible for that low point count, I know this isn’t an excuse, but despite that lowered point count, I WAS still working on the game and being productive, contributing to the final product</p>
+                    <p>This Sprint, I managed to finish 11 points, these were mostly implementing feedback given to us by playtesters, such as making the controls less sensitive or fixing UI bugs, I also made it so that the skin image files were all successfully added to the skins page, and I also created and implemented SFX button clicking sounds, getting them hooked up to the settings menu as well so you can decrease and increase the follow</p>
+                    <h3>Updated Skins:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/377/SP5-skin.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Now to what I spent most of my time this sprint on, bug fixing. A lot of the bugs we encountered are either rare and hard to reproduce, or are only on the mobile build, both of these creating their own challenges for me and my team to handle. The ones that were hard to recreate had me playtesting a lot trying to fix them, the worst of these was a bug that would very rarely occur that would push the internal view of the lanes to the side, causing the player's movement to not be centered to the lanes of the street mesh, which we’re still in the process of fixing and finding the issue of.</p>
+                    <p>When it comes to the mobile build only issues, we faced quite a few and we’re able to fix most of them, unfortunately I did have to scalp my VHS filter even more, reducing it even more in complexity, since Unreal Engine mobile builds don’t seem to like Post Processing shaders too much. The worst issue we encountered was, only on the mobile build, the player would sometimes start running and moving when they were supposed to, walking off the screen even in the title menu, which we’ve managed to fix for the most part by adding a redundancy boolean.</p>
+                    <p>The issue that they mobile build only bugs were so difficult is that we can’t build to android on my primary workspace, so I’m forced to either wait to get to my laptop at home, or to send it to my produce and have him build, then tell me if my fixes worked, it took a lot longer than I would’ve liked, and multiple build attempts, but eventually we managed to get things fixed!</p>
+                    <p>The final thing I really worked on this sprint was assembly of the house and some of the sound effects, the assembly isn’t very notable as it was essentially using building blocks, but the sound effects were certainly fun to work on. I had a little bit of experience with maxing sound effects before but I assumed I would have a little trouble regardless, and I was right, after first I wasn’t sure where to begin, but after talking to someone I know who gave me some advice, I decided to pick a random noise and edit it to be the kind of sound I wanted, which gave me a lot of freedom to work with, I took a completely different and unrelated noise (In this instance the CAASP testing audio cue) and edited it to be completely unrecognizable and fit what I needed, it taught my quite a lot about sound design and I enjoyed it a lot!</p>
+                    <h3>Button SFX:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/377/SP5-button.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Redone Coloration:</h3>
+                    <img src="images/377/sprint5-1.png" alt="Devlog Image">
+                    <br />
+                </div>
+            </details>
+
+            <details class="devlog-entry">
                 <summary>Sprint #4</summary>
                 <div class="devlog-content">
                     <br />
