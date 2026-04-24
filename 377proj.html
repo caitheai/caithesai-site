@@ -43,6 +43,35 @@
         <section class="projects-section">
             <h2 style="text-align:center;">Development Updates & Devlog</h2>
             <details class="devlog-entry">
+                <summary>Sprint #6</summary>
+                <div class="devlog-content">
+                    <br />
+                    <p>As we reach the end of our Game’s development cycle and our sprints, our point count has been slowing down a little bit, but this is mostly thanks to us finishing up all the features and models and just focusing on bugs and implementing models. I got 11 points done this sprint, as well as finishing up every single last piece of programming, which thankfully only leaves us with a little bit of implementation to do, and bug fixing, for our last sprint, leaving us with a very chill and empty final sprint.</p>
+                    <p>One of the main things that I did this sprint was working on some of the final UI that was needed and implementing final playtest feedback from our most recent playtest, however what I put the most work into was the respawn screen, a few of our playtesters didn’t enjoy having to go back to the main menu to play another run, so we moved to implement a respawn screen, however we had a small issue where, because of how I coded the intro, adding in respawns without reloading the level created a whole plethora of issues that took forever trying to fix. At first I tried to just get around these issues and account for them, but it felt like every time I did that it broke something else, so eventually I just decided to sort of ‘fake it’ by reloading the level and using booleans to skip past all the introduction and main menu events, which ended up working out really well and fixed pretty much every issue I had.</p>
+                    <br />
+                    <h3>Respawn Page:</h3>
+                    <img src="images/377/sprint6-1.png" alt="Devlog Image">
+                    <br />
+                    <p>Another big thing I worked on was the pause menu while playing, I honestly can’t believe took me so long to even think of a pause menu, luckily it was much easier than the respawning system and took a lot less time, which definitely helped keep me motivated and left me time to focus on other things.</p>
+                    <br />
+                    <h3>Pause Menu:</h3>
+                    <img src="images/377/sprint6-2.png" alt="Devlog Image">
+                    <br />
+                    <p>Something I worked on that was a little strange was remaking some of our animation systems, it may not seem like a big deal but for a little bit we were having a small issue where the sliding animation wouldn’t play every time if you were spamming slides, which sometimes gives the player the appearance of phasing through objects, which’d technically count as bug, however it took me remaking and editing an existing system to get it to work the way we wanted to and not do this, so it counted as a point. Originally I was using animation states that were swapped between when the player was running, sliding, or jumping however this could be broken by the spam if you slide while already sliding in the animation state, I fixed this by instead switching to animation montages pushed to a slot, so if you slide again it’d override the animation and play it again, which thankfully fixed all of our issues.</p>
+                    <p>Apart from all of that, most of what I did this sprint was just adding in meshes and textures, getting them all set up correctly, and bug fixing. There were a LOT of bugs that I had to work on during this sprint, but I managed to get quite a few of them done thankfully, I managed to fix some issues with the boost causing people to die after using it, I fixed a few lighting issues that were causing players to get flashbanged, as well as some issues regarding obstacles and their collision / culling that were causing weird camera and gameplay issues, overall, it wasn’t too high of a point count this sprint, but it was very productive!</p>
+                    <br />
+                    <h3>Randomization of QTE:</h3>
+                    <img src="images/377/sprint6-3.png" alt="Devlog Image">
+                    <br />
+                    <br />
+                    <h3>Animation Pipeline:</h3>
+                    <img src="images/377/sprint6-4.png" alt="Devlog Image">
+                    <br />
+
+                </div>
+            </details>
+            
+            <details class="devlog-entry">
                 <summary>Sprint #5</summary>
                 <div class="devlog-content">
                     <br />
