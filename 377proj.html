@@ -43,6 +43,37 @@
         <section class="projects-section">
             <h2 style="text-align:center;">Development Updates & Devlog</h2>
             <details class="devlog-entry">
+                <summary>Reflection</summary>
+                <div class="devlog-content">
+                    <br />
+                    <p>Our development of this mobile game has finally come to an end, and I’m happy to say that not only have I learned a lot, but I’ve also improved my abilities quite a lot, I’ve learned a lot more about animation over the course of this project, as well as some of the sound systems in Unreal, along with many other things that have not only helped me get better at using Unreal, but also improved my ability to work in teams.</p>
+                    <p>Over the course of this project, a lot of things went well, we got the basic gameplay loop down within the first sprint and things were smooth sailing for most of the project, I am especially proud of the effects I got for the UI, It was my first time trying to have a rough / blurry effect for my UI, the first time I’d ever had to work with trying to make my UI look NOT clean and crisp, it was certainly a challenge at the beginning, especially since before this I hadn’t gone too deep into the UI editor for Unreal, but I think this project really showed me that not only did I have what it takes to make good UI, but also that I enjoy UI creation quite a bit and I am pretty good at it, I learned how to recreate the old VHS camcorder aesthetic pretty well, I even got the blur of the text down where I could, which really added to the style  and the overall feeling of the game.</p>
+                    <br />
+                    <h3>UI Examples:</h3>
+                    <img src="images/377/post-ui-1.png" alt="Devlog Image">
+                    <img src="images/377/post-ui-2.png" alt="Devlog Image">
+                    <img src="images/377/post-ui-3.png" alt="Devlog Image">
+                    <img src="images/377/post-ui-4.png" alt="Devlog Image">
+                    <br />
+                    <p>Another thing that went really well was how I dealt with sound effects and music. In one of my previous sprint reviews I talked about some of my new experiences mixing my own sound effects, but using existing audio completely unrelated to what I needed and mixing it to fix what I was looking for, and this ended up working out perfectly, making all of my sound effects turn out great and really fit what I was looking for, but the thing I’m most proud of is the music, I had a friend work on it but when implementing it into Unreal, I found that the basic unreal engine sound system really wasn’t what I was looking for, so after a bit of digging I ended up running into the Metasound system, which was honestly what I was looking for in a sound system for a long time, instead of playing sounds and being done with them like the only sound system, Metasound lets me have them as a living sound I can access during runtime, which really helped me do some super cool things with the music that I am very proud of, and overall helped me grow my knowledge about Unreal Engine</p>
+                    <br />
+                    <h3>Music Code:</h3>
+                    <img src="images/377/post-music-1.png" alt="Devlog Image">
+                    <img src="images/377/post-music-2.png" alt="Devlog Image">
+                    <br />
+                    <p>On the other hand, some things definitely didn’t do good, the thing that was probably the worst for us was underestimating the engine and how many problems it would cause when we built to mobile. I definitely mentioned this before in earlier sprint reviews but originally, we didn’t anticipate any issues, since I’d had lots of experience creating builds for Unreal, and while me and my team figured it’d be a little bit different, we didn’t anticipate just HOW different it’d be, the first issue we had was getting the build to even work, which took me a few days and definitely wasn’t as simple as the few button clicks that building for Windows was. It was hard to learn the pipeline of setting up android studio and getting all the files to work properly. </p>
+                    <p>After, when we finally got the build working, we ran into a plethora of issues regarding rending and lighting in the scene, since Unreal, despite making advances for Mobile, definitely isn’t built for it, leading to a lot of issues with things that worked perfectly fine on computer, such as Post Processing, Skeletal Rendering, and Lighting, all of which gave us issues that took multiple sprints and multiple people to fix, which led us to the unfortunate situation of having to cut my VHS post processing effect that I worked very hard on.</p>
+                    <p>If I had all of this retrospective when starting the project, I would’ve probably prioritized getting the build working and ironing out all of the build errors long before which did, I’d start working on getting a test build set up as early as the first sprint, then build after every major system was added so that we could stomp out bugs and issues as soon as they popped up and we wouldn’t have to deal with spending a lot of time solving them and could focus mostly on coding the actual game and then fixing them as they came up, letting us use much less time overall.</p>
+                    <p>Overall, this project was quite the learning experience, I’m pretty proud of what we made but there is plenty of room for improvement with my next project!</p>
+                    <br />
+                    <h3>Production Art:</h3>
+                    <img src="images/377/post-art-1.jpg" alt="Devlog Image">
+                    <img src="images/377/post-art-2.jpg" alt="Devlog Image">
+                    <br />
+                </div>
+            </details>
+
+            <details class="devlog-entry">
                 <summary>Sprint #6</summary>
                 <div class="devlog-content">
                     <br />
@@ -70,7 +101,7 @@
 
                 </div>
             </details>
-            
+
             <details class="devlog-entry">
                 <summary>Sprint #5</summary>
                 <div class="devlog-content">
@@ -86,7 +117,7 @@
                     <p>Now to what I spent most of my time this sprint on, bug fixing. A lot of the bugs we encountered are either rare and hard to reproduce, or are only on the mobile build, both of these creating their own challenges for me and my team to handle. The ones that were hard to recreate had me playtesting a lot trying to fix them, the worst of these was a bug that would very rarely occur that would push the internal view of the lanes to the side, causing the player's movement to not be centered to the lanes of the street mesh, which we’re still in the process of fixing and finding the issue of.</p>
                     <p>When it comes to the mobile build only issues, we faced quite a few and we’re able to fix most of them, unfortunately I did have to scalp my VHS filter even more, reducing it even more in complexity, since Unreal Engine mobile builds don’t seem to like Post Processing shaders too much. The worst issue we encountered was, only on the mobile build, the player would sometimes start running and moving when they were supposed to, walking off the screen even in the title menu, which we’ve managed to fix for the most part by adding a redundancy boolean.</p>
                     <p>The issue that they mobile build only bugs were so difficult is that we can’t build to android on my primary workspace, so I’m forced to either wait to get to my laptop at home, or to send it to my produce and have him build, then tell me if my fixes worked, it took a lot longer than I would’ve liked, and multiple build attempts, but eventually we managed to get things fixed!</p>
-                    <p>The final thing I really worked on this sprint was assembly of the house and some of the sound effects, the assembly isn’t very notable as it was essentially using building blocks, but the sound effects were certainly fun to work on. I had a little bit of experience with maxing sound effects before but I assumed I would have a little trouble regardless, and I was right, after first I wasn’t sure where to begin, but after talking to someone I know who gave me some advice, I decided to pick a random noise and edit it to be the kind of sound I wanted, which gave me a lot of freedom to work with, I took a completely different and unrelated noise (In this instance the CAASP testing audio cue) and edited it to be completely unrecognizable and fit what I needed, it taught my quite a lot about sound design and I enjoyed it a lot!</p>
+                    <p>The final thing I really worked on this sprint was assembly of the house and some of the sound effects, the assembly isn’t very notable as it was essentially using building blocks, but the sound effects were certainly fun to work on. I had a little bit of experience with mixing sound effects before but I assumed I would have a little trouble regardless, and I was right, after first I wasn’t sure where to begin, but after talking to someone I know who gave me some advice, I decided to pick a random noise and edit it to be the kind of sound I wanted, which gave me a lot of freedom to work with, I took a completely different and unrelated noise (In this instance the CAASP testing audio cue) and edited it to be completely unrecognizable and fit what I needed, it taught my quite a lot about sound design and I enjoyed it a lot!</p>
                     <h3>Button SFX:</h3>
                     <video width="65%" controls>
                         <source src="videos/377/SP5-button.mp4" type="video/mp4">
