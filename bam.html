@@ -42,8 +42,59 @@
                 <summary>Sprint #1</summary>
                 <div class="devlog-content">
                     <span class="dropdown-date">September 9th 2026</span>
-                    <p>Description of this update, what changed, new features, or bug fixes.</p>
-                    <img src="images/devlog1.png" alt="Devlog Image 1">
+                    <p>Althought this was only our first sprint, a point where many people like to take their time and get their projects off of the ground, I was determined to make sure me and my team didn't get lazy, so I hit the ground running right away. This sprint I completely 35 cards, all of which were 1 point, and I got quite a lot done in the project to show this!</p>
+                    <p>The first thing I worked on after getting the github and unreal project created was player movement. In the design for this game, the player has to control their robot from outside of the mech, so the controller for the player was incredibly important, I wanted it to have lots of movement options for getting around, and I think nothing shows this off better than how I programmed the rocket boost!</p>
+                    <h3>Code:</h3>
+                    <img src="images/bam/sp1-im1.png" alt="Dev IM 1">
+                    <br />
+                    <h3>Boost In Action:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp1-movement.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>As you can see in the video above, we decided to make the movement system rather fast paced to accout for how the player will be jumping around from building to building to get a good angel for controlling the robot, which I think the strafing definitely helps with, espeically since I made it possible to do mid air, which'll allow the player to use them in conjunction with the rocket boosts to get a really cool effect and shooting themselves around the map'</p>
+                    <h3>Strafing Code:</h3>
+                    <img src="images/bam/sp1-im2.png" alt="Dev IM 2">
+                    <br />
+                    <p>Moving on from the player movement, one of the most important parts about our game is taking control of the robot, so I wanted to make that as seamless as possible, luckily, I'd already perfected a system for smooth camera movements and points from previous projects, making use for a map variable I was able to create a blueprint type for camera locations, get references to every one stored in a map, and then call them using a name at any point, which allows for really easy references to points for easing between!</p>
+                    <p>This camera system makes it really easy for the smooth camera transition from 3rd person player to 1st person robot control, combined with the turning to face the robot and the following them provides a really nice smooth movement that I think looks really good and feels really good!</p>
+                    <h3>Robot View in Action:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp1-roboview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code:</h3>
+                    <img src="images/bam/sp1-im3.png" alt="Dev IM 3">
+                    <img src="images/bam/sp1-im4.png" alt="Dev IM 4">
+                    <br />
+                    <p>To go along with this, something I had a little bit of trouble with was getting the robot movement working, originally I intended to simply use a regular movement call similar to the player, but I had some trouble getting that working based on how the character movement controller likes to work, so I eventually settled for having movement in tick and turning on a boolean toggle, which I know isn't the best way to go about doing this, but for my use case it worked best and doesn't have any issues!</p>
+                    <h3>Robot Movement:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp1-robot.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Code:</h3>
+                    <img src="images/bam/sp1-im5.png" alt="Dev IM 5">
+                    <img src="images/bam/sp1-im6.png" alt="Dev IM 6">
+                    <br />
+                    <p>The thing I had probably the most trouble with had to be the upgrade tree system I made, I've made an upgrade tree before for a previous project on mobile, so I figured it'd be pretty similar, but it ended up being quite different and very hard, originally I wanted the cursor to jump between upgrade icons and lock to them, but quickly found that was much too hard and decided to pivot, but then learned that Unreal doesn't natively contain support for detecting Widget overlaps, which I then had to program myself which was quite the challenge, especially with the math involved, but eventually I got it down</p>
+                    <h3>Widget Overlap Code:</h3>
+                    <img src="images/bam/sp1-im7.png" alt="Dev IM 7">
+                    <br />
+                    <p>After I got the widget overlap working, I still had a lot of issues with actually getting a references to WHICH widget you were overlapping, overall, I think the upgrade tree as a system took me longer than all of the other systems I worked on this sprint combined, it took a long time to deal with all of the issues that popped up, but eventually I found a workaround that was perfect for our use case and works perfect every single time with no bugs, and I think I'm really happy with how it turned out! (Mind the Programmer Art!)</p>
+                    <h3>Upgrade Tree:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp1-tree.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code:</h3>
+                    <img src="images/bam/sp1-im8.png" alt="Dev IM 8">
+                    <img src="images/bam/sp1-im9.png" alt="Dev IM 9">
+                    <br />
+                    <p>Overall, I think this was a fnatastic first sprint, I think 35 Points was a great first start but I really want to try and hit an even higher point count as I think I can do even better!</p>
                 </div>
 
             </details>
@@ -53,10 +104,20 @@
             <button class="team-toggle">Team Info →</button>
             <div class="team-dropdown">
                 <ul>
-                    Programmers:
-                    <li>D1</li>
-                    <li>D2</li>
-                    <li>D3</li>
+                    <li>Andrew Ballaris - Producer</li>
+                    <li>Taj Zillner - Lead Designer</li>
+                    <li>Cai Mcdonnell - Lead Programmer</li>
+                    <li>Devin Monaghan - Programmer</li>
+                    <li>Keanu Smith - Programmer</li>
+                    <li>Ben Smith - Level Designer</li>
+                    <li>James Songchalee - Level Designer</li>
+                    <li>Marcos Betancourt - Animator</li>
+                    <li>Luciano Luis - Animator</li>
+                    <li>Ben Vang - Animator</li>
+                    <li>Christopher Van - Animator</li>
+                    <li>Christopher Solorio - 3D Artist</li>
+                    <li>Marisa Hernandez - 3D Artist</li>
+                    <li>Kiranpreet Kaur - 3D Artist</li>
                 </ul>
             </div>
         </div>
