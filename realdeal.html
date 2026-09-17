@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Deal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <div class="tech-shape small" style="top:10px; left:20px;"></div>
+        <div class="tech-shape medium" style="bottom:30px; right:50px;"></div>
+        <div class="tech-shape large" style="top:200px; right:10px;"></div>
+        <div class="tech-shape small" style="bottom:100px; left:150px;"></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About Me</a>
+        </nav>
+
+        <section class="projects-section">
+            <div class="project-header-box">
+                <h2>Real Deal</h2>
+                <p>Real Deal is my submission for the 2026 Chico State Local Game Jam, in which we were only given a total of 48 hours to get a working game out, I was the PROGRAMMEr working in a team with a total of 9 people</p>
+                <p>Below is my Development Process with I go over how the game progressed through the jam, how I dealt with the many problems I encountered, and the new things that I learned during the jam!</p>
+
+                <div class="project-status">
+                    <span>Status:</span>
+                    <span>Finished</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://caithesai.itch.io/real-deal" class="visit-btn">Itch.Io Download</a>
+                    <a href="https://itch.io/jam/12th-annual-chico-game-jam/entries" class="visit-btn">Jam Submissions</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 style="text-align:center;">Development Updates & Devlog</h2>
+
+            <details class="devlog-entry">
+                <summary>The 48 Hours</summary>
+                <div class="devlog-content">
+                    <br />
+                    <span class="dropdown-date">Sept 11 - Sept 13 2026</span>
+                    <p>Overrall, I think this Game Jam went a lot better than my last one (Global Game Jam 2026) from the get-go, from before the jame even started I already had gotten together with some amazing Programmers and Modelers to put a team together, which removed the problem I had in my previous jam of teammates who didn't pull their weight! For this Jam, the given theme was</p>
+                    <h3>Artificial</h3>
+                    <p>After a bit of brainstorming, our team came up with an idea similar to the game Papers Please, where you'd be given items and would have to use clues to determine if the object given to you is a real or a fake using different tools given to you, such as a magnifying glass, brush, UV Light, and More!</p>
+                    <p>The first thing I started on was the player camera and object movement, since getting the objects to spawn in and present themselves to the player in a way that looked nice was one of the most important parts. We had an idea to add a Resident Evil / Fallout 4 style inspection system where you can rotate the object around in a 3D space using your mouse, I'd never made something like this before so I had to kind of figure out on my own how to do, we had a few hickups with some of that spinning being a bit jerky, but we eventually managed to get this fixed</p>
+                    <h3>Inspection System:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/realdeal/sys1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Code:</h3>
+                    <img src="images/realdeal/im1.png" alt="Devlog Image 1">
+                    <br />
+                    <p>There were some other cool things I did during this game jam that I'd never really touched before but ended up coming out really well, such as when we used a moving texture for the conveyor belt rather than actually moving the mesh, which, with help from one of the other programmers on this team, came out really well!</p>
+                    <p>I think something we definitely had a lot of issues with was item collision detection, the main way we've been taking care of this is clicks, but we'd been having a lot of issues where the clicking system wouldn't work randomly for certain items. After a lot of testing, we eventually discovered this issue was due to the fact that the select meshes of some items we'd added didn't have physics objects, and since there were Skeletal Meshes in Unreal, despite having the click detection channel set to detect correctly, they still didn't, which took us a while to find.</p>
+                    <p>Something I think I am most proud of though is how we handled item data, if you've looked through my Portfolio before it should be obvious just how much I love data tables in Unreal, so I doubt it is any surprise that we decided to go with Data Tables for handling pretty much all of the item data, from how they would cracked if you broke a real item, and even the value. Which ended up working extremely well!</p>
+                    <h3>Code:</h3>
+                    <img src="images/realdeal/im2.png" alt="Devlog Image 2">
+                    <img src="images/realdeal/im3.png" alt="Devlog Image 3">
+                    <br />
+                    <p>Finally, another thing I am really proud of is how well the button system game out, it has a few hickups if you spam it, which we couldn't manage to patch out since we only had 48 hours, but they are rather rare edge cases that weren't even encountered by any players of the Jam, so for this purpose, they don't matter as much! The button is both used to call in new items and send out items that are believed to be real, which came out really well and functions great!</p>
+                    <h3>Button Use:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/realdeal/sys2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Code:</h3>
+                    <img src="images/realdeal/im4.png" alt="Devlog Image 1">
+                    <br />
+                    <p>Overrall, I'm really happy with how this Game Jam turned out, I leanred a lot, got to meet some new people, and I think out game came out exceptionally well, it even made some of the people playing it laugh and get lost in playing the game, playing for almost 15-20 minutes, which is always a win in my book!</p>
+                </div>
+
+            </details>
+
+        </section>
+        <div class="project-team">
+            <button class="team-toggle">Team Info →</button>
+            <div class="team-dropdown">
+                <ul>
+                    <li>Cai Mcdonnell - Programming</li>
+                    <li>Sean Gibson - Programming</li>
+                    <li>Ty Barnea Chotam - Programming</li>
+                    <li>Diego A. Galvez-Gomez - Modeling / Audio</li>
+                    <li>Maya Andrade - Modeling</li>
+                    <li>Devin G Monaghan - Texturing</li>
+                    <li>Ruben Corona - Modeling / Animation</li>
+                    <li>Isabella Adams - Modeling / Animation</li>
+                    <li>Aly Ray - 2D Art</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="transition.js"></script>
+    <script>
+        document.querySelectorAll('.devlog-entry').forEach(entry => {
+            const content = entry.querySelector('.devlog-content');
+            const summary = entry.querySelector('summary');
+            const DURATION = 600;
+
+            summary.addEventListener('click', e => {
+                e.preventDefault();
+
+                const isOpen = entry.hasAttribute('open');
+
+                if (!isOpen) {
+                    entry.setAttribute('open', '');
+
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.opacity = 1;
+                    content.style.transform = "translateY(0)";
+
+                    setTimeout(() => {
+                        content.style.maxHeight = "none";
+                    }, DURATION);
+
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+
+                    content.offsetHeight;
+
+                    content.style.maxHeight = 0;
+                    content.style.opacity = 0;
+                    content.style.transform = "translateY(-10px)";
+
+                    setTimeout(() => {
+                        entry.removeAttribute('open');
+                    }, DURATION);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.team-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('open');
+                const clickSound = document.getElementById("click-sound");
+                if (clickSound) {
+                    clickSound.currentTime = 0;
+                    clickSound.play().catch(() => { });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+    THING:
+
+     <details class="devlog-entry">
+    <summary>Update #1 - Jan 1, 2026</summary>
+    <div class="devlog-content">
+        <br />
+        <p>Description of this update, what changed, new features, or bug fixes.</p>
+        <img src="images/devlog1.png" alt="Devlog Image">
+        <br />
+        <h3>Name of Video:</h3>
+        <video width="65%" controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </details>
+    -->
