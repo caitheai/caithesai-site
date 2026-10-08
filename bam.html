@@ -39,6 +39,52 @@
             <h2 style="text-align:center;">Development Updates & Devlog</h2>
 
             <details class="devlog-entry">
+                <summary>Sprint #3</summary>
+                <div class="devlog-content">
+                    <span class="dropdown-date">October 10th 2026</span>
+                    <p>This sprint went really well, I didn't get quite as many points done this sprint as the last ones, but overall I think I got quite a few really cool things done that really set the project apart and made it stand out more as a game. This sprint I got 19 cards done with a total of 21 points, that is 18 one-point cards and 1 three-point cards, which even though is less than my last sprints, I think is still a very respectable number!</p>
+                    <p>The main reason I got less work done this sprint is that I was coordinating my own steam release for another game project that I'm working on! Although despite that I still got quite a few systems done, from the out of bounds system bring a laser down on the player's head, to getting the attack system working, to working on the locomotion graph for our player robot, I got quite a lot done!</p>
+                    <p>I think the thing I am most proud of this sprint was the out of bounds event, once you step out of bounds, it gives the player a warning to turn back, and then if they don't, it will place a spinning target at their feet before shooting them with a giant orbital laser a few seconds later, it came out really well and I must say I am incredibly proud of it, it's something that not all players are going to encounter, but it is definitely really fun and I really enjoyed programming it!</p>
+                    <h3>Orbital Laser:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp3-laser.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code Snipets:</h3>
+                    <img src="images/bam/sp3-im1.png" alt="Dev IM 1">
+                    <br />
+                    <img src="images/bam/sp3-im3.png" alt="Dev IM 1">
+                    <br />
+                    <p>Another important thing I worked on was getting the Animation Blueprint and Locomotion Graph done for the player robot, this was more towards the end of the sprint since I didn't get the rig for the player robot until the Tuesday right before the sprint end, which only left me about one day to do it, but it still turned out really well despite that, with me managing to get the slot + bone blending as well as the entire state machine locomotion graph set up in a relatively short amount of time all things considered'</p>
+                    <p>Since I don't yet have any animations to work with, all I have is the state machine locomotion graph, which contains some more important states but doesn't contain things like attacks and tilts / dodging, since those won't be states but instead'</p>
+                    <h3>Anim Graph Snipets:</h3>
+                    <img src="images/bam/sp3-im5.png" alt="Dev IM 1">
+                    <br />
+                    <img src="images/bam/sp3-im4.png" alt="Dev IM 1">
+                    <br />
+                    <p>In the image above you can see multiple different colored arrows, these help my designer destinquish between the two types of state changes, the green arrows represent state changes that require a change, since as in a boolean or an enum, while the red arrows represent auto state changes, which take place after the previous state runs through once!</p>
+                    <p>the other large system I worked on was finally getting the robot attacks working, while this system doesn't yet look super good since at the end of the day, the most satisfying part of combat comes with the animations and the effects that go along with it (Hit rumble, freeze-frame, etc. Which I'll be adding once I get the animations), I got the backend and overall function of the robot combat working, which wasn't too difficult.</p>
+                                        <h3>Orbital Laser:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp3-combat.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code Snipets:</h3>
+                    <img src="images/bam/sp3-im6.png" alt="Dev IM 1">
+                    <br />
+                    <img src="images/bam/sp3-im7.png" alt="Dev IM 1">
+                    <br />
+                    <p>Overall I think I had a very good and productive sprint where I not only learned a little bit more about particles but also made some food systems that I am very proud of, as well as laying lots of back end groundwork for systems to come such as our robot's animations!</p>
+                    <h3>Extra Images:</h3>
+                    <img src="images/bam/sp3-im2.png" alt="Dev IM 1">
+                    <br />
+                </div>
+
+            </details>
+
+            <details class="devlog-entry">
                 <summary>Sprint #2</summary>
                 <div class="devlog-content">
                     <span class="dropdown-date">September 24th 2026</span>
@@ -147,7 +193,7 @@
                     <li>Christopher Solorio - 3D Artist</li>
                     <li>Marisa Hernandez - 3D Artist</li>
                     <li>Kiranpreet Kaur - 3D Artist</li>
-                    <li>Keanu Smith - 3D Artist</li>
+                    <li>Keanu Smith - 3D Artist / Programmer</li>
                 </ul>
             </div>
         </div>
