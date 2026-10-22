@@ -32,6 +32,7 @@
                     <span>Status:</span>
                     <span>In Development</span>
                 </div>
+
             </div>
         </section>
 
@@ -42,7 +43,50 @@
                 <summary>Sprint #4</summary>
                 <div class="devlog-content">
                     <span class="dropdown-date">October 21st 2026</span>
-                    <p>This sprint was certainly a difficult one, I got 26 cards done and boy was it a struggle, I worked on a lot of different systems that I have absolutely zero experience with, like working on a way for meshes to both play animation files and also be animated through code </p>
+                    <p>This sprint was certainly a difficult one, I got 26 points done and boy was it a struggle, I worked on a lot of different systems that I have absolutely zero experience with, like working on a way for meshes to both play animation files and also be animated through code, finding out how to create an input queue, and a system to detect combinations of gamepad joystick inputs, all of which were quite a struggle but I think all came out really good!</p>
+                    <p>The first major system I worked on this sprint that I must say I had a LOT of trouble with was the gamepad input detection, this system was going to be used for the abilities in the recommended layout for the robot, where things like the uppercut ability would require you to make a downcircle motion with the joysticks, and blocking requires you to push both of them inward. I had quite a bit of trouble originally of how I was going to go about this, and honestly their might even be a better way than what I found, but I think what I made ended up pretty good, and making this definitely had me thinking differently than I normally would!</p>
+                    <h3>Input Detection:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp4-gamepad.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code Snipet:</h3>
+                    <img src="images/bam/sp4-im1.png" alt="Dev IM 1">
+                    <br />
+                    <p>The next thing I worked on that that gave me quite a bit of trouble was the input queue, I have to admit I didn't have the best idea on how to go about doing this when I started working on it, and the process had me stuck for quite a bit when I was working on it. Originally I found a way to do it using animation montages, but since art that point we didn't have any animations, and I'd figured it would be a while before we got them, I wanted to find a way to go about it without them</p>
+                    <p>This process left me absolutely stumped, so eventually I went back and decided to go along with my original idea of the input queue based on the animation montages, I also found a really interesting node while doing this that allows you to stimulate input event calls without the player actually adding any input which was really cool!</p>
+                    <h3>Input Queue:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp4-queue.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <h3>Code Snipet:</h3>
+                    <img src="images/bam/sp4-im2.png" alt="Dev IM 1">
+                    <br />
+                    <h3>Anim Notifies:</h3>
+                    <img src="images/bam/sp4-im3.png" alt="Dev IM 1">
+                    <br />
+                    <p>The final big thing that I worked on, besides implementing animations, setting up anim graphs, and checking my team member's code was creating a system that allowed code to create it's own animations, while at the same time allowing anim files to be played and layering them on top of each other. Originally I had sought to find a way to record animations in Unreal, which in itself isn't hard but Unreal just kept fighting with the rig the entire time so I had to find a different way.</p>
+                    <p>After lots of searching and playing around with things I found the anim node called 'Transform (Modify) Bone', which allows a variable to add or set Rotation, Scale, and Location. I ended up attaching this to a timeline in the player, which shot values over to the anim blueprint and allowed curves to create animations, much like animating in traditional software like Maya or Blender, just was a bit more effort, which allowed me to make some really cool animations that are simple enough that it would've been a waste to have our animators work on them</p>
+                    <h3>Code-Driven Animations:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp4-anims1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp4-anims2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Code Snipets:</h3>
+                    <img src="images/bam/sp4-im4.png" alt="Dev IM 1">
+                    <br />
+                    <img src="images/bam/sp4-im5.png" alt="Dev IM 1">
+                    <br />
+                    <p>I'm very exited I got to get this working and figure it out, since one of my favorite systems to work with in Unreal is animations and anim graphs, so expanding my knowledge on them is something I find very fun to work with!</p>
+                    <p>Overall, this was a difficult sprint, I got a lot done but also struggled for a good bit of time on the input queue so I didn't get nearly as much as I could have, but thanks to how much I learned, I feel like this sprint was still a very good one, and I was still plenty productive with the 26 points I completed!</p>
                 </div>
 
             </details>
@@ -74,7 +118,7 @@
                     <br />
                     <p>In the image above you can see multiple different colored arrows, these help my designer destinquish between the two types of state changes, the green arrows represent state changes that require a change, since as in a boolean or an enum, while the red arrows represent auto state changes, which take place after the previous state runs through once!</p>
                     <p>the other large system I worked on was finally getting the robot attacks working, while this system doesn't yet look super good since at the end of the day, the most satisfying part of combat comes with the animations and the effects that go along with it (Hit rumble, freeze-frame, etc. Which I'll be adding once I get the animations), I got the backend and overall function of the robot combat working, which wasn't too difficult.</p>
-                                        <h3>Orbital Laser:</h3>
+                    <h3>Orbital Laser:</h3>
                     <video width="65%" controls>
                         <source src="videos/bam/sp3-combat.mp4" type="video/mp4">
                         Your browser does not support the video tag.
