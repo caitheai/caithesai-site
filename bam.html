@@ -38,6 +38,44 @@
 
         <section class="projects-section">
             <h2 style="text-align:center;">Development Updates & Devlog</h2>
+            
+            <details class="devlog-entry">
+                <summary>Sprint #5</summary>
+                <div class="devlog-content">
+                    <span class="dropdown-date">November 5th 2026</span>
+                    <p>This sprint was certainly an interesting one for me, I was out sick in some of the most crucial days of the sprint so unfortunately I missed a lot of work time, on top of that we ran into a very large issue that took up a lot of my time and prevented me from getting many points done, and issue we unfortunately still havent really fixed fully yet, which has been super unfortunate</p>
+                    <p>I managed to get only 11 cards done this sprint which was deeply disappointing to me, I'd really hoped to get more done and it didn't help that I ended up getting stuck on trying to fix our movement issue which I'll go over later in the blog post! I'm looking forward to getting back on the saddle next sprint and really being able to put in more work and getting more cards done!</p>
+                    <p>The main big thing I worked on this sprint that I actually managed to get done was more implementation of animations, which isn't as easy as it sounds, getting systems set up before the animations to go along with it often result in needing to redo or refactor those systems later to fit the animations once they're given! This sprint I got the Player's Jumping and Rocket Boost animations implemented as well as the Robot's Backhand, Crouching, and Blocking animations!</p>
+                    <h3>Player and Robot Animations:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp5-robotanims.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp5-playeranims.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Another thing I did was redoing the player / camera movements, which you might have seen in the videos above. Our designer ended up changing his mind and wishing for the camera to be able to be moved around instead of stuck statically to the character, which required me to decouple them and add code to allow the camera to move independantly from the player, which didn't end up being too hard to do but still took a little bit of time.</p>
+                    <h3>Code Snipet:</h3>
+                    <img src="images/bam/sp5-im1.png" alt="Dev IM 1">
+                    <br />
+                    <img src="images/bam/sp5-im2.png" alt="Dev IM 2">
+                    <br />
+                    <p>Now moving onto what caused me the most trouble during the tail end of the sprint and caused me to not be able to catch up point-wise after missing a few days. We've been having some trouble with the Player Robot sliding a lot with the new animations, so I was tasked with setting out to fix this, which was easier said than done, since the way the animations work, having the movement and animations be uncoupled is what was causing the sliding.</p>
+                    <p>The solution I ended up needing was root motion, I'd never done root motion or even heard of it before, so I originally tried attempting to recreate my own version of it by teleporting the main collision capsule to the rig's center bone at the last frame of the animation, which didn't end up working without a stutter frame, so I began researching more, eventually landing on Root Motion!</p>
+                    <p>One thing I discovered while working on this is that Unreal Engine 5.6 seems to have a strange issue with Root Motion that causes it to not work correctly, since changing the project to 5.8 and doing nothing else fixed my issues, so either 5.6 has some strange unique setting I'm missing, or it is just broken. Despite all of these issues, I am commited to finding a way to make this system work and get the animations to look good!</p>
+                    <h3>Current Movement Issue:</h3>
+                    <video width="65%" controls>
+                        <source src="videos/bam/sp5-movement.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br />
+                    <p>Overall, including the other things I did not listed here, such as handling Jira card approval for Programming Cards, creating builds, and adding in a fail/success state for the levels, I did a decent bit, but compared to the sprint in the past I'm overall disappointed in how much I got done this sprint, I feel like I really let my team down and I'm looking forward to doing much better next sprint!</p>
+                </div>
+
+            </details>
 
             <details class="devlog-entry">
                 <summary>Sprint #4</summary>
